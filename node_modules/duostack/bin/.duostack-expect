@@ -1,0 +1,9 @@
+#!/usr/bin/env expect
+set target   [lindex $argv 0]
+set message  [lindex $argv 1]
+set response [lindex $argv 2]
+
+spawn -noecho ssh $target
+expect $message
+send "$response...\n"
+interact
