@@ -1,5 +1,5 @@
 var server = require('router').create();
-var port = parseInt(process.argv[2] || 8080, 10);
+var port = process.argv[2] || 8080;
 
 server.file('/s/{file}','./s/{file}');
 
